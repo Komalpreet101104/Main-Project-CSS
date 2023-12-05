@@ -1,0 +1,254 @@
+body {
+    margin: 0; /* Remove default body margin */
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0rem;
+    background-color: #f6a1ba7a;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;}
+
+nav ul li {
+    margin-right: 20px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bolder;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: rgb(9, 9, 9);; /* Set the color of the underline */
+    position: absolute;
+    bottom: -4px; /* Adjust the distance between the word and the underline */
+    left: 50%;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+.heading {
+    text-align: center; /* Center the text */
+    padding-top: 6rem; /* Add padding to the top */
+    background-color: #f9f2f2;
+    font-family: 'Signika Negative', sans-serif;
+    letter-spacing: 4px;
+
+}
+
+.heading h1 {
+    margin-bottom: 0; /* Remove default margin to avoid extra space */
+}
+
+
+.about .img {
+    flex: 1 1 40rem;
+    padding-left: 12rem;
+    transition: transform 0.3s ease-in-out ;
+
+}
+
+.about .img img {
+    width: 60%;
+    box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.7);
+    border: 0.1rem solid rgba(69, 67, 67, 0.7);
+    border-radius: 50%;
+    background-color: white;
+}
+
+.about .img img:hover {
+
+transform: scale(1.04); /* Adjust the scale factor as needed */
+
+}
+.about .content {
+    flex: 1 1 40rem;
+    padding-right: 20px;
+    margin-left: -7rem; /* Adjust this value to decrease the space */
+}
+
+.about .content span {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.about .content h3 {
+    color: #222;
+    font-size: 2rem;
+    padding-top: 20px;
+    font-family: Ephesis;
+    letter-spacing: 2px;
+}
+
+.about .content p {
+    color: #222;
+    font-size: 1.3rem;
+    line-height: 1;
+    font-family: 'Signika Negative', sans-serif;
+
+}
+
+
+.review {
+    display: grid;
+    background: linear-gradient(to bottom, rgb(222, 190, 224), #f6a1ba7a); /* Gradient from your color to light pink */
+    grid-template-columns: repeat(2, calc(50% - 1rem)); /* Decreased width and added padding */
+    gap: 1rem;
+    padding: 10rem; /* Added padding to the section */
+}
+
+.review .box {
+    padding: 0.7rem ;
+    background-color: rgba(247, 247, 247, 0.797);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    border: 0.1rem solid rgba(78, 77, 77, 0.7);
+    border-radius: 10px;
+
+}
+
+
+.review .box .user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+    font-family: 'Poiret One';
+
+}
+.review .box:hover .user {
+
+transform: scale(1.04); /* Adjust the scale factor as needed */
+}
+
+.review .box .user h3 {
+    font-size: 1.5rem;
+    color: #fd6da9;
+    
+}
+
+.customer-say {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem; /* Adjust the margin to move it down */
+    background-color: #ffffff; /* Optional: Add a background color for emphasis */
+}
+
+.customer-say p {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    font-family: 'Signika Negative', sans-serif;
+
+}
+
+.review .box span{
+    font-family: 'Signika Negative', sans-serif;
+
+}
+
+.review .box p{
+    font-size: 1.1rem;
+    color:#222;
+    line-height: 2;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.review .box:hover p{
+
+transform: scale(1.03); /* Adjust the scale factor as needed */
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+        
+    .social-icons li {
+    display: inline-block;
+    margin: 0 10px;
+    }
+        
+    .social-icons a {
+    color: rgba(251, 103, 165, 0.912);
+    font-size: 35px;
+    }
+        
+    .social-icons a:hover {
+    color: #3635358e;
+    }
+    
+    footer {
+    background: #ffffff;
+    text-align: center;
+    }
+    
+    .legal-links {
+      margin-top: 20px;
+    }
+    
+    .legal-links a {
+      color: rgb(236, 158, 241);
+      text-decoration: none;
+      margin: 0 10px;
+     font-family: 'Signika Negative', sans-serif;
+      
+      font-weight: 600;
+    }
+    
+    .legal-links a:hover {
+      text-decoration: underline;
+    }
+
+
+    @media screen and (min-width: 769px) {
+        nav a {
+            font-size: 20px; /* Adjust font size for larger screens */
+        }
+    
+        .heading h1 {
+            font-size: 3rem; /* Adjust font size for larger screens */
+        }
+    
+        .about .content h3 {
+            font-size: 2rem; /* Adjust font size for larger screens */
+        }
+    
+        .about .content p {
+            font-size: 1.5rem; /* Adjust font size for larger screens */
+        }
+    
+        .customer-say p {
+            font-size: 2rem; /* Adjust font size for larger screens */
+        }
+    
+        .review .box h3,
+        .review .box span,
+        .review .box p {
+            font-size: 1.2rem; /* Adjust font size for larger screens */
+        } 
+    }

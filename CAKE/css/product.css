@@ -1,0 +1,251 @@
+.heading {
+    text-align: center;
+}
+
+body{ margin: 0;}
+
+header {
+    background-color: #fd6da9c3 ;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add this to your existing CSS */
+
+.logo img {
+    width: 150px; /* Adjust the size as needed */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bolder;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: rgb(9, 9, 9);; /* Set the color of the underline */
+    position: absolute;
+    bottom: -4px; /* Adjust the distance between the word and the underline */
+    left: 50%;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+.center-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    font-size: 25px;
+}
+
+.center-line h1 {
+    margin: 0;
+    padding: 0.5rem; /* Optional: Add padding for better visual appearance */
+}
+
+.title a{
+    text-decoration: none;
+}
+
+.category .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap:1.5rem;
+    padding:0 2rem;
+}
+
+.category .box-container .box img
+{
+    transition: transform 0.3s ease-in-out;
+}
+
+.category .box-container .box:hover img
+{
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+}
+
+.category .box-container a {
+    text-decoration: none; /* Remove underline from category names */
+}
+
+.category .box-container .box{
+    text-align:center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    border:0.1rem solid rgba(0, 0, 0, 0.096);
+    border-radius:5px ;
+    overflow: hidden;
+
+}
+
+.category .box-container .box img{
+    height:12rem;
+    width:16.6rem;
+}
+
+.category .box-container .box h3{
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+    color: #222;
+}
+
+.category .box-container .box:hover h3{
+    color: #e0bebe;
+}
+
+.products .box-container {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 5rem;
+    padding: 0 10rem; /* Add padding on both sides */
+    background-color: #fddbdb81;
+  }
+
+  .products .box-container .box {
+    position: relative;
+    background: #f3f3f3;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 0.5rem  rgba(0, 0, 0, 0.7);
+    border:0.1rem solid rgba(0, 0, 0, 0.096);
+    border-radius:5px ;
+  }
+
+.products .box-container .box:hover  .icons{
+    top: 0;
+}
+
+  .products .box-container .box .icons {
+    position: absolute;
+    top: -105%;
+    left: 0;
+    height: 15rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(243, 243, 243, 0.8);
+    gap: 1rem;
+    transition: 0.2s all ease;
+
+  }
+
+  .products .box-container .box .icons a {
+    font-size: 2rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    color: #666;
+    transition: 0.2s;
+  }
+
+.products .box-container .box .icons a:hover{
+    background: var(--brown);
+    color:#e0bebe;
+}
+
+  .products .box-container .box .img {
+    height:15rem;
+    overflow: hidden;
+  }
+
+  .products .box-container .box .img img {
+    height:145%;
+    width:100%;
+    object-fit: cover;
+  }
+
+  .products .box-container .box .content {
+    padding: 1.5rem;
+  }
+
+  .products .box-container .box .content .add-to-cart {
+    display: inline-block;
+    background-color: #e0bebe;
+    color: #fff;
+    padding: 0.5rem 0.5rem;
+    border-radius: 3px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.products .box-container .box .content .add-to-cart:hover {
+    background-color: #ef8a0784;
+}
+
+
+  .products .box-container .box .content h3 {
+    font-size: 2rem;
+    margin: 0.5rem 0; /* Adjust the margin as needed */
+    color: #222;
+  }
+
+  .products .box-container .box .content .price {
+    font-size: 1.5rem;
+    color: #222;
+    padding: 0.5rem 0; /* Adjust the padding as needed */
+  }
+
+  .products .box-container .box .content .stars i {
+    font-size: 1.4rem;
+    color: var(--brown);
+    margin: 0.5rem 0; /* Adjust the margin as needed */
+
+  }
+
+  footer{ 
+    background: #fd6da9c3;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .message{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+  }
+
+  .title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 70px;
+    letter-spacing: 5px; /* Adjust the margin as needed */
+  }
+  
+  .title span {
+    color: var(--brown);
+  }
+  

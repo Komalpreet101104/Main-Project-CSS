@@ -1,0 +1,177 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* This ensures the body takes at least the full height of the viewport */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../Images/C11.webp);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)), url(C11.webp);
+}
+
+body::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+header {
+    background-color: #fd6da95a;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bolder;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: rgba(248, 50, 133, 0.912);
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    position: relative;
+    z-index: 1;
+    font-family: 'Emilys Light', cursive;
+}
+
+.content h1 {
+    font-size: 80px;
+    color: #f70b6d;
+    margin-bottom: 10px; /* Add some margin between the bakery name and tagline */
+}
+
+.content p.tagline {
+    font-size: 24px;
+    color: #f7f2f2; /* Customize the color as needed */
+    font-family: 'Emilys Light', cursive;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.content h1:hover {
+
+-webkit-text-stroke: 2px rgba(252, 4, 107, 0.912);
+color: transparent;}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+button {
+    width: 130px;
+    height: 60px;
+    font-size: 17px;
+    margin-left: 2px;
+    font-family: 'Raleway', sans-serif;
+    transition: 0.5s;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.btn,
+.bts {
+    margin-left: 10px;
+    background-color: transparent;
+    border: 2.4px solid #fff;}
+
+.btn:hover,
+.bts:hover {
+    background-color: #fd6da95a;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: auto; /* This pushes the footer to the bottom */
+    text-align: center;
+    /* background-color: #fd6da95a; */
+    color: #0c0c0c;
+    font-family: 'Signika Negative', sans-serif;
+
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for even smaller screens */
+    .content h1 {
+        font-size: 50px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
